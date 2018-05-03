@@ -9,7 +9,7 @@
 		}
 		//вывод таблицы
 		private function print_table(){
-			$link = mysqli_connect('test.vz1','root','','ex1');
+			$link = mysqli_connect("a228420.mysql.mchost.ru", "a228420_1", "goR873nb", "a228420_1");
 			$sql = "SELECT * FROM employees";
 			if($_POST['filter']['min']!=NULL && $_POST['filter']['min']!=""){
 				$salary_min=intval($_POST['filter']['min']);
@@ -39,7 +39,7 @@
 		}
 		// удаление сотрудника из таблицы
 		private function delete_user($user_id){
-			$link = mysqli_connect('test.vz1','root','','ex1');
+			$link = mysqli_connect("a228420.mysql.mchost.ru", "a228420_1", "goR873nb", "a228420_1");
 			$del_id = intval($user_id);
 			$sql = "DELETE FROM employees WHERE id = '$del_id'";
 			$result = mysqli_query($link,$sql);

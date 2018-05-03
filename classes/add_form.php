@@ -36,7 +36,7 @@
 			$this->name = $_POST['new']['name'];
 			$this->age = $_POST['new']['age'];
 			$this->salary = $_POST['new']['salary'];
-			$link = mysqli_connect('test.vz1','root','','ex1');
+			$link = mysqli_connect("a228420.mysql.mchost.ru", "a228420_1", "goR873nb", "a228420_1");
 			$sql = 'INSERT INTO employees (`name`,`age`,`salary`) VALUES (?,?,?)';
 			$stmt = mysqli_prepare($link, $sql);
 			mysqli_stmt_bind_param($stmt, 'sii', $this->name,intval($this->age),intval($this->salary));
@@ -55,7 +55,7 @@
 		public function print_form(){
 			if(isset($_GET['edit_id'])){
 				$id = intval($_GET['edit_id']);
-				$link = mysqli_connect('test.vz1','root','','ex1');
+				$link = mysqli_connect("a228420.mysql.mchost.ru", "a228420_1", "goR873nb", "a228420_1");
 				$sql = "SELECT * FROM employees WHERE id = '$id'";
 				if($result = mysqli_query($link,$sql)){
 					$row = mysqli_fetch_assoc($result);
@@ -91,7 +91,7 @@
 				$name = $_POST['update']['name'];
 				$age = intval($_POST['update']['age']);
 				$salary = intval($_POST['update']['salary']);
-				$link = mysqli_connect('test.vz1','root','','ex1');
+				$link = mysqli_connect("a228420.mysql.mchost.ru", "a228420_1", "goR873nb", "a228420_1");
 				$sql = "UPDATE employees SET name='$name', age='$age',salary='$salary' WHERE id = '$id'";
 				if($result = mysqli_query($link,$sql)){
 					header('Location:/');
