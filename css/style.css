@@ -1,0 +1,78 @@
+body {
+	width: 600px;
+}
+table, th, td {
+	border: 1px solid lightgrey;	
+	border-spacing: 0;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	text-align: center;
+}
+
+.filter_price {
+	width: 45%;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.filter_price-line{
+	margin-right: 10px;
+}
+
+.filter_price-form {
+	flex-direction: row;
+}
+
+.delete_icon{
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/images/delete_icon.png);
+	background-size: cover;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.delete_icon-edit{
+	background-image: url(/images/edit_icon.png);
+}
+
+.hidden {
+	display: none;
+}
+
+.delete_button {
+	float: right;
+	width: 150px;
+}
+
+.delete_button-mass {
+	border: 1px solid grey;
+	text-align: center;
+	cursor: pointer;
+}
+
+.chechbox_table {
+	margin:0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 15px;
+}
